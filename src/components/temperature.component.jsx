@@ -3,14 +3,14 @@ import AnimatedNumber from "animated-number-react";
 
 
 const Temperature = (props) => {
-	const { actualTemperature, maxTemperature, minTemperature } = props.data;
+	const { temp_c, maxtemp_c, mintemp_c } = props.data;
 	
 	const formatValue = (value) => value.toFixed(0);
 	
 	return (<div className="temperature">
 		<div className="temperature__deg">
 			<AnimatedNumber
-				value={ parseInt(actualTemperature) }
+				value={ parseInt(temp_c) }
 				formatValue={ formatValue }
 			/>
 		</div>
@@ -22,7 +22,7 @@ const Temperature = (props) => {
 					<span className="temperature__mark">{ '\u2191' }</span>
 					<p className="temperature__text">
 						<AnimatedNumber
-							value={ parseInt(maxTemperature) }
+							value={ parseInt(maxtemp_c) }
 							formatValue={ formatValue }
 						/>
 					</p>
@@ -32,7 +32,7 @@ const Temperature = (props) => {
 					<span className="temperature__mark">{ '\u2193' }</span>
 					<p className="temperature__text">
 						<AnimatedNumber
-							value={ parseInt(minTemperature) }
+							value={ parseInt(mintemp_c) }
 							formatValue={ formatValue }
 						/>
 					</p>

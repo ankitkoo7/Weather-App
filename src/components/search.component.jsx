@@ -17,7 +17,7 @@ const Search = (props) => {
         <input
           type="search"
           role="search"
-          placeholder="Search for a location"
+          placeholder="Search for a city"
           className="search__input"
           onChange={ onChangeValue }
           onBlur={ onClearField }

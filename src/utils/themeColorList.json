@@ -24,14 +24,6 @@
     "secondary": "rgba(241, 241, 241, 1)"
   },
   {
-    "id": "4als",
-    "theme": "tonic",
-    "bg": "rgba(253, 255, 252, 1)",
-    "text": "rgba(1, 22, 39, 1)",
-    "primary": "rgba(187, 13, 36, 1)",
-    "secondary": "rgba(4, 80, 142, 1)"
-  },
-  {
     "id": "5als",
     "theme": "rainy",
     "bg": "rgba(228, 253, 225, 1)",
