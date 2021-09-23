@@ -1,5 +1,4 @@
-import React, { Fragment, useContext, useEffect, useState } from "react";
-import Chart from "react-apexcharts";
+import React, { Fragment, useContext, useEffect} from "react";
 import themeColorList from "../utils/themeColorList.json";
 import { ThemeContext } from "../hock-context/themeContext";
 import { Card, Image, Table } from "react-bootstrap";
@@ -7,9 +6,6 @@ import { Card, Image, Table } from "react-bootstrap";
 const Diagram = (props) => {
   const { forecastday, loaded } = props.data;
   const { hour } = forecastday[0];
-  const [colorBg, setColorBg] = useState("#fff");
-  const [colorText, setColorText] = useState("#495758");
-  const [colorPrimary, setColorPrimary] = useState("#1fa69d");
   const { theme } = useContext(ThemeContext);
   useEffect(() => {
     try {
