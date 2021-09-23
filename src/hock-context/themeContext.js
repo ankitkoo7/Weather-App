@@ -8,14 +8,14 @@ const getInitialTheme = () => {
     const storedPrefs = window.localStorage.getItem(STORAGE_NAME_THEME_COLOR);
     
     if (!storedPrefs) {
-      window.localStorage.setItem(STORAGE_NAME_THEME_COLOR, 'default');
-      return 'default';
+      window.localStorage.setItem(STORAGE_NAME_THEME_COLOR, 'dark');
+      return 'dark';
     }
     
     return storedPrefs;
   }
   
-  return 'default';
+  return 'dark';
 };
 
 
