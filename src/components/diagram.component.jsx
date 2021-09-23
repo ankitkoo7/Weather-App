@@ -1,32 +1,10 @@
-import React, { Fragment, useContext, useEffect} from "react";
-import themeColorList from "../utils/themeColorList.json";
-import { ThemeContext } from "../hock-context/themeContext";
+import React, { Fragment} from "react";
 import { Card, Image, Table } from "react-bootstrap";
 
 const Diagram = (props) => {
   const { forecastday, loaded } = props.data;
   const { hour } = forecastday[0];
-  const { theme } = useContext(ThemeContext);
-  useEffect(() => {
-    try {
-      // get data theme from json
-      const findTheme = themeColorList.filter(
-        (themeColor) => themeColor.theme === theme
-      )[0];
-
-      setColorBg(findTheme.bg);
-      setColorText(findTheme.text);
-      setColorPrimary(findTheme.primary);
-    } catch (err) {
-      // read data-theme styles variables from body :root index.html
-      const getLinkOnBody = document.body;
-      const getCssVarContainer = getComputedStyle(getLinkOnBody);
-
-      setColorBg(getCssVarContainer.getPropertyValue("--color-bg"));
-      setColorText(getCssVarContainer.getPropertyValue("--color-text"));
-      setColorPrimary(getCssVarContainer.getPropertyValue("--color-primary"));
-    }
-  }, [loaded, theme]);
+ 
 
   return (
     <Fragment>
