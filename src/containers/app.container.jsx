@@ -79,7 +79,7 @@ class AppContainer extends React.Component {
   render() {
     const override = `
   display: block;
-  margin: 30% auto;
+  margin: 25% auto;
   border-color: rgba(31, 166, 157, 1);
 `;
     if (this.state.location !== null) {
@@ -118,7 +118,6 @@ class AppContainer extends React.Component {
           css={override}
           size={150}
         />
-        <p className="spinner-text">Loading...</p>
       </Fragment>
     );
   }

@@ -20,8 +20,8 @@ const Detail = (props) => {
 			<div className="detail__indicator">
 				<div className="detail__info">
 					<AnimatedNumber
-						value={ parseFloat(wind_kph) }
-						formatValue={ (value) => value.toFixed(2) }
+						value={ parseInt(wind_kph) }
+						//formatValue={ (value) => value.toFixed(2) }
 					/>
 					<span className="detail__measure">km/s</span>
 				</div>
